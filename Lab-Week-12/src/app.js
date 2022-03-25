@@ -1,6 +1,6 @@
 //part 2
-function elementSelector (x)   {
-    let selection = document.querySelector(x)
+function elementSelector (inputElement)   {
+    let selection = document.querySelector(inputElement)
     return selection
 }
 console.log(elementSelector(/*insert html element between quotes here*/))
@@ -11,8 +11,8 @@ console.log(elementSelector(/*insert html element between quotes here*/))
 // inside the function instead of requiring it later on. 
 // That alternative function is below:
 
-function elementSelectorAlt (y) {
-    console.log(document.querySelector(y))
+function elementSelectorAlt (inputElementAlt) {
+    console.log(document.querySelector(inputElementAlt))
     return
 }
 
@@ -39,12 +39,17 @@ function honorsChecker (x)  {
         let numOfGrades = item.grades.length
         let avgGrade = gradeSum / numOfGrades
         if (avgGrade >= 80)   {
-            studentsScholarship.push(
-                {"name": item.name, "gradeAvg": avgGrade})
-        
+            studentsScholarship.push({"name": item.name, "gradeAvg": avgGrade})
         }
     }
     return(studentsScholarship)
-}
-  
+} 
 console.log(honorsChecker(students))
+
+//part 4
+function darkMode ()    {
+    const selectedDiv = document.querySelector(".container")
+    selectedDiv.classList.add("dark-theme")
+    return
+}
+
