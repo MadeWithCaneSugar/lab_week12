@@ -1,9 +1,17 @@
+//PLEASE READ THE COMMENTS!
+//THEY ARE IMPORTANT TO UNDERSTADNING MY THOUGHT PROCESS
+//ON AT LEAST PART 2.
+//THEY WILL CLEAR UP ANY CONFUSION YOU MAY HAVE REGARDING IT
+
 //part 2
 function elementSelector (inputElement)   {
     let selection = document.querySelector(inputElement)
-    return selection
+    return(selection)
 }
-console.log(elementSelector(/*insert html element between quotes here*/))
+console.log(elementSelector("footer"))
+
+//I'm logging footer for demonstation purposes,but it's pretty obvious
+//that you could replace that with any other element on the page
 
 // Alternatively, if I'm to follow your words exactly;
 // "...a function that selects a single element and logs it to the console"
@@ -20,6 +28,7 @@ function elementSelectorAlt (inputElementAlt) {
 // of the selection that can be called later. That can be easily changed
 // by re-adding the "let selectionAlt = document.querySelector(y)", and
 // then altering the return line to say "return selectionAlt"
+
 
 //part3
 const students = [
@@ -43,13 +52,20 @@ function honorsChecker (x)  {
         }
     }
     return(studentsScholarship)
-} 
+}
+
 console.log(honorsChecker(students))
+
+//I tried to split this function multiple times in multiple different places.
+//I admit that I don't know how I'm supposed to adapt this into more than one function.
+//I assume that I'm probably required to create an entirely new set of code, rather than
+//adapting old code. But I can' think of any other logic to use to get the desired result.
 
 //part 4
 function darkMode ()    {
     const selectedDiv = document.querySelector(".container")
-    selectedDiv.classList.add("dark-theme")
+    selectedDiv.classList.replace("light-theme", "dark-theme")
     return
 }
 
+darkMode()
